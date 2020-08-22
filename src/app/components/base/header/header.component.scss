@@ -1,0 +1,77 @@
+nav{
+  margin: 0.1em 8em 0.1em 2em;
+  background-color: white;
+  height: 5.4em;
+
+  .header-logo {
+    float: left;
+
+    img {
+      height: 5.2em;
+    }
+  }
+
+  .header-tools {
+    float: right;
+    height: 5.2em;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    color: var(--black-font);
+
+    a:-webkit-any-link{
+      color: var(--black-font) !important;
+    }
+
+    .float-left {
+      float: left;
+      margin: auto;
+    }
+
+    i {
+      font-size: 1.1em !important;
+      margin-right: 1.1em;
+    }
+
+    .apps i {
+      color: var(--grey-disabled);
+      font-size: 2.2em !important;
+      margin-right: 1.1em;
+    }
+
+    span {
+      font-size: 1.2em;
+      height: 1.8em;
+      width: 1.8em;
+      background-color: #48921f;
+      border-radius: 1.4em;
+      color: white;
+
+      p {
+        margin: 0.25em 0.65em;
+      }
+    }
+
+    .user {
+      p {
+        margin: 0.2em 1em;
+      }
+
+      .name {
+        font-size: 0.8em;
+        font-weight: 500;
+        position: relative;
+
+        i {
+          position: absolute;
+          top: 0.05em;
+        }
+      }
+
+      .role {
+        font-size: 0.65em;
+        margin-left: 1.25em;
+      }
+    }
+  }
+}
