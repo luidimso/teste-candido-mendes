@@ -1,10 +1,14 @@
 /* You can add global styles to this file, and also import other style files */
 :root {
---black-font: #3E4857;
---grey-disabled: #D4D6DA;
+  --black-font: #3E4857;
+  --grey-disabled: #D4D6DA;
+  --blue: #2A3D84;
+  --light-blue: #455BAC;
+  --blue-active: #3B4E91;
 }
 
 html, body {
   margin: 0 !important;
   font-family: 'Roboto', sans-serif !important;
+  background-color: #F5F7FA;
 }

@@ -1,0 +1,65 @@
+nav {
+  background-color: var(--blue);
+  width: 4.5em;
+  height: 100%;
+  color: var(--light-blue);
+  padding: 1em 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  overflow: hidden;
+  transition: width 0.3s;
+
+  p {
+    margin-top: 0;
+    margin-bottom: 0.5em;
+    padding: 0.7em 1.2em;
+    border-left: 0.25em solid var(--blue);
+    border-right: 0.25em solid var(--blue);
+    cursor: pointer !important;
+    white-space: nowrap;
+    position: relative;
+
+    i {
+      font-size: 1.1em;
+      margin-left: 0.25em;
+    }
+
+    span {
+      margin-left: 2.7em;
+      font-size: 0.7em;
+      position: absolute;
+      top: 1.2em;
+    }
+  }
+
+  .menu i {
+    color: white;
+    font-size: 1.7em;
+    margin-left: 0;
+  }
+
+  .active {
+    background-color: var(--blue-active);
+    border-right-color: var(--blue-active);
+    border-left-color: white;
+    color: white;
+  }
+
+  .nav-footer {
+    position: fixed;
+    top: 485px;
+    width: 4.5em;
+    overflow: hidden;
+    transition: width 0.3s;
+  }
+}
+
+.expanded {
+  width: 19em;
+
+  .nav-footer {
+    width: 19em;
+  }
+}
