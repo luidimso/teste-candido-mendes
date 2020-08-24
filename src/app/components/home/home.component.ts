@@ -16,12 +16,18 @@ export class HomeComponent implements OnInit {
   requerimento:Requerimento = {
     descricao: "",
     input: ""
-  }
-
+  };
+  requerimentos:Requerimento[] = [];
 
   constructor() { }
 
-  ngOnInit(): void {
+  ngOnInit() {
+    for(let i=1; i<4; i++){
+      let exemplo:Requerimento = {
+        descricao: "Exemplo "+i,
+        input: "Teste "+i
+      };
+      this.requerimentos.push(exemplo);
+    }
   }
-
 }

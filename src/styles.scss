@@ -1,6 +1,7 @@
 /* You can add global styles to this file, and also import other style files */
 :root {
   --black-font: #3E4857;
+  --black-btn: #555E6B;
   --grey-font: #6E7888;
   --grey-disabled: #D4D6DA;
   --blue: #2A3D84;
@@ -22,7 +23,7 @@ input:focus, select:focus {
 
 .btn-blue {
   height: 34px;
-  font-size: 0.65em;
+  font-size: 0.65rem;
   background-color: var(--default-blue);
   border: 1px solid var(--default-blue);
   color: white;
@@ -32,9 +33,51 @@ input:focus, select:focus {
   cursor: pointer;
 }
 
+.btn-rounded-black {
+  height: 28px;
+  font-size: 0.65rem;
+  background-color: var(--black-btn);
+  border: 1px solid var(--black-btn);
+  color: white;
+  font-weight: 500;
+  letter-spacing: 1px;
+  border-radius: 3px;
+  padding: 1px 12px 1px 32px;
+  cursor: pointer;
+  border-radius: 14px;
+  position: relative;
+  i {
+    font-size: 0.8rem;
+    position: absolute;
+    top: 7px;
+    left: 10px;
+  }
+}
+
+.btn-rounded-gray {
+  height: 28px;
+  font-size: 0.65rem;
+  background-color: transparent;
+  border: 1px solid var(--grey-disabled);
+  color: var(--black-font);
+  font-weight: 500;
+  letter-spacing: 1px;
+  border-radius: 3px;
+  padding: 1px 12px 1px 32px;
+  cursor: pointer;
+  border-radius: 14px;
+  position: relative;
+  i {
+    font-size: 0.8rem;
+    position: absolute;
+    top: 7px;
+    left: 10px;
+  }
+}
+
 .btn-green {
   height: 34px;
-  font-size: 0.65em;
+  font-size: 0.65rem;
   background-color: var(--green);
   border: 1px solid var(--green);
   color: white;
@@ -46,7 +89,7 @@ input:focus, select:focus {
 
 .btn-grey {
   height: 34px;
-  font-size: 0.65em;
+  font-size: 0.65rem;
   background-color: transparent;
   border: 1px solid var(--grey-disabled);
   color: var(--black-font);

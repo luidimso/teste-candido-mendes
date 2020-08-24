@@ -42,5 +42,25 @@
       <input *ngIf="requerimento.input != ''" class="btn-green" type="submit" value="Adicionar a natureza">
       <input class="btn-grey" type="reset" value="Limpar">
     </form>
+
+
+    <table>
+      <tr>
+        <th class="col-4 text-left"><p>NOMES</p></th>
+        <th class="col-2 text-center"><p>UNIDADES ENVOLVIDAS</p></th>
+        <th class="col-2 text-center"><p>TIPOS DE NATUREZA</p></th>
+        <th class="col-4 text-center"><p>AÇÃO</p></th>
+      </tr>
+      <tr *ngFor="let r of requerimentos">
+        <td class="col-4 text-left"><p class="descricao">{{r.descricao}}</p><p>{{r.input}}</p></td>
+        <td class="col-2 text-center"><p>12</p></td>
+        <td class="col-2 text-center"><p>200</p></td>
+        <td class="col-4 text-center">
+          <button class="btn-rounded-black" type="button"><i class="material-icons">visibility</i> Visualizar</button>
+          <button class="btn-rounded-gray" type="button"><i class="material-icons">create</i> Editar</button>
+          <button class="btn-rounded-gray" type="button"><i class="material-icons">delete_outline</i> Deletar</button>
+        </td>
+      </tr>
+    </table>
   </section>
 </main>
