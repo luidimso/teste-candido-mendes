@@ -1,0 +1,6 @@
+<div class="backdrop" *ngIf="show" (click)="sendResponse(false)"></div>
+<div class="modal" *ngIf="show">
+  <h3>Você tem certeza que deseja excluir?</h3>
+  <button class="btn-rounded-gray-big" type="button" (click)="sendResponse(false)">Cancelar</button>
+  <button class="btn-rounded-red-big" type="button" (click)="sendResponse(true)"><i class="material-icons">delete_outline</i> Deletar</button>
+</div>

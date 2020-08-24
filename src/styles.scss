@@ -9,6 +9,7 @@
   --blue-active: #3B4E91;
   --green: #3A8962;
   --default-blue: #2966D8;
+  --red: #E2375E;
 }
 
 html, body {
@@ -42,15 +43,13 @@ input:focus, select:focus, button:focus {
   font-weight: 500;
   letter-spacing: 1px;
   border-radius: 3px;
-  padding: 1px 12px 1px 32px;
+  padding: 5px 12px;
   cursor: pointer;
   border-radius: 14px;
-  position: relative;
   i {
-    font-size: 0.8rem;
-    position: absolute;
-    top: 7px;
-    left: 10px;
+    font-size: 1rem;
+    vertical-align: middle;
+    margin-top: -2px;
   }
 }
 
@@ -63,15 +62,53 @@ input:focus, select:focus, button:focus {
   font-weight: 500;
   letter-spacing: 1px;
   border-radius: 3px;
-  padding: 1px 12px 1px 32px;
+  padding: 5px 12px;
   cursor: pointer;
   border-radius: 14px;
-  position: relative;
   i {
-    font-size: 0.8rem;
-    position: absolute;
-    top: 7px;
-    left: 10px;
+    font-size: 1rem;
+    vertical-align: middle;
+    margin-top: -2px;
+  }
+}
+
+.btn-rounded-gray-big {
+  height: 40px;
+  font-size: 0.65rem;
+  background-color: transparent;
+  border: 1px solid var(--grey-disabled);
+  color: var(--black-font);
+  font-weight: 600;
+  letter-spacing: 1px;
+  border-radius: 3px;
+  padding: 13px 26px 13px 28px;
+  cursor: pointer;
+  border-radius: 20px;
+  margin: 10px;
+  i {
+    font-size: 1rem;
+    vertical-align: middle;
+    margin-top: -3px;
+  }
+}
+
+.btn-rounded-red-big {
+  height: 40px;
+  font-size: 0.65rem;
+  background-color: var(--red);
+  border: 1px solid var(--red);
+  color: white;
+  font-weight: 600;
+  letter-spacing: 1px;
+  border-radius: 3px;
+  padding: 13px 26px 13px 28px;
+  cursor: pointer;
+  border-radius: 20px;
+  margin: 10px;
+  i {
+    font-size: 1rem;
+    vertical-align: middle;
+    margin-top: -3px;
   }
 }
 
@@ -97,4 +134,15 @@ input:focus, select:focus, button:focus {
   border-radius: 3px;
   padding: 1px 20px;
   cursor: pointer;
+}
+
+
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 2000;
+  background-color: rgba(0,0,0,0.3);
 }

@@ -1,0 +1,18 @@
+.modal {
+  width: 370px;
+  height: 200px;
+  background-color: white;
+  z-index: 2005;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 3px;
+  text-align: center;
+  color: var(--black-font);
+
+  h3 {
+    padding: 20px 80px 0 80px;
+    font-size: 1.3em;
+  }
+}

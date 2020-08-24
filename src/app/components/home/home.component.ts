@@ -17,7 +17,12 @@ export class HomeComponent implements OnInit {
     descricao: "",
     input: ""
   };
+  requerimentoSelecionado:Requerimento = null;
   requerimentos:Requerimento[] = [];
+
+  modalController:any = {
+    modalDelete: false
+  }
 
   constructor() { }
 
@@ -31,10 +36,29 @@ export class HomeComponent implements OnInit {
     }
   }
 
+
+
   add(){
     let exemplo:Requerimento = new Requerimento(this.requerimento.descricao, this.requerimento.input);
     this.requerimentos.unshift(exemplo);
     this.requerimento.descricao = "";
     this.requerimento.input = "";
+  }
+
+
+
+  showDeleteModal(requerimento:Requerimento){
+    this.modalController.modalDelete = true;
+    this.requerimentoSelecionado = requerimento;
+  }
+
+
+
+  deleteEvent($event){
+    this.modalController.modalDelete = $event.modalDelete;
+
+    if($event.deleteRequerimento){
+      this.requerimentos.splice(this.requerimentos.indexOf(this.requerimentoSelecionado), 1);
+    }
   }
 }

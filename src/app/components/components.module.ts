@@ -5,12 +5,14 @@ import { FormsModule } from '@angular/forms';
 import { HomeComponent } from './home/home.component';
 import { HeaderComponent } from './base/header/header.component';
 import { NavbarComponent } from './base/navbar/navbar.component';
+import { DeleteComponent } from './modals/delete/delete.component';
 
 @NgModule({
   declarations: [
     HomeComponent,
     HeaderComponent,
-    NavbarComponent
+    NavbarComponent,
+    DeleteComponent
   ],
   imports: [
     CommonModule,
@@ -20,12 +22,14 @@ import { NavbarComponent } from './base/navbar/navbar.component';
   entryComponents: [
     HomeComponent,
     HeaderComponent,
-    NavbarComponent
+    NavbarComponent,
+    DeleteComponent
   ],
   exports:[
     HomeComponent,
     HeaderComponent,
-    NavbarComponent
+    NavbarComponent,
+    DeleteComponent
   ]
 })
 export class ComponentsModule { }
