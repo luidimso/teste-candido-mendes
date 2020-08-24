@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { User } from 'src/app/models/user.model';
+import { Requerimento } from 'src/app/models/requerimento.model';
 
 @Component({
   selector: 'app-home',
@@ -11,7 +12,12 @@ export class HomeComponent implements OnInit {
   user:User = {
     name: "Luidi Matheus",
     role: "Developer"
+  };
+  requerimento:Requerimento = {
+    descricao: "",
+    input: ""
   }
+
 
   constructor() { }
 

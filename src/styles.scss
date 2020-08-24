@@ -15,3 +15,43 @@ html, body {
   font-family: 'Roboto', sans-serif !important;
   background-color: #F5F7FA;
 }
+
+input:focus, select:focus {
+  outline: none;
+}
+
+.btn-blue {
+  height: 34px;
+  font-size: 0.65em;
+  background-color: var(--default-blue);
+  border: 1px solid var(--default-blue);
+  color: white;
+  font-weight: bold;
+  border-radius: 3px;
+  padding: 1px 20px;
+  cursor: pointer;
+}
+
+.btn-green {
+  height: 34px;
+  font-size: 0.65em;
+  background-color: var(--green);
+  border: 1px solid var(--green);
+  color: white;
+  font-weight: bold;
+  border-radius: 3px;
+  padding: 1px 20px;
+  cursor: pointer;
+}
+
+.btn-grey {
+  height: 34px;
+  font-size: 0.65em;
+  background-color: transparent;
+  border: 1px solid var(--grey-disabled);
+  color: var(--black-font);
+  font-weight: bold;
+  border-radius: 3px;
+  padding: 1px 20px;
+  cursor: pointer;
+}
