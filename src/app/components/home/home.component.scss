@@ -212,7 +212,17 @@ main {
           }
 
           .btn-rounded-gray, .btn-rounded-black {
-            margin: 12px;
+            margin: 14px 6px;
+          }
+        }
+
+        td.action {
+          position: relative;
+
+          .arrow-right {
+            position: absolute;
+            top: 20px;
+            font-size: 1rem;
           }
         }
 
@@ -245,6 +255,18 @@ main {
         .col-4 {
           float: left;
           width: 32.3333333%;
+        }
+      }
+
+      tr:hover {
+        td {
+          color: var(--default-blue) !important;
+          font-weight: 600;
+
+          .descricao {
+            font-weight: 800;
+            color: var(--default-blue);
+          }
         }
       }
     }
