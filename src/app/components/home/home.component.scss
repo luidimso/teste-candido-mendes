@@ -193,10 +193,12 @@ main {
         }
 
         td {
-          height: 58px;
+          min-height: 58px;
           margin: -3px;
           color: var(--grey-font);
           font-weight: 500;
+          white-space: normal;
+          word-wrap: break-word;
 
           .descricao {
             font-size: 1.1em;

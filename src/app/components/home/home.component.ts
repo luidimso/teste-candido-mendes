@@ -30,4 +30,11 @@ export class HomeComponent implements OnInit {
       this.requerimentos.push(exemplo);
     }
   }
+
+  add(){
+    let exemplo:Requerimento = new Requerimento(this.requerimento.descricao, this.requerimento.input);
+    this.requerimentos.unshift(exemplo);
+    this.requerimento.descricao = "";
+    this.requerimento.input = "";
+  }
 }
