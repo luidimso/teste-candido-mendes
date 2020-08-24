@@ -1,9 +1,9 @@
 nav {
   background-color: var(--blue);
-  width: 4.5em;
+  width: 72px;
   height: 100%;
   color: var(--light-blue);
-  padding: 1em 0;
+  padding: 16px 0;
   position: fixed;
   top: 0;
   left: 0;
@@ -50,16 +50,16 @@ nav {
   .nav-footer {
     position: fixed;
     top: 485px;
-    width: 4.5em;
+    width: 72px;
     overflow: hidden;
     transition: width 0.3s;
   }
 }
 
 .expanded {
-  width: 19em;
+  width: 304px;
 
   .nav-footer {
-    width: 19em;
+    width: 304px;
   }
 }

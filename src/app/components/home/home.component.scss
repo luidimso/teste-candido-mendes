@@ -1,3 +1,94 @@
 main {
-  margin-left: 4.5em;
+  margin-left: 72px;
+
+  section {
+    padding: 25px 70px 25px 32px;
+
+    .top {
+      height: 86px;
+      width: 100%;
+      padding: 5px;
+
+      .path {
+        float: left;
+
+        img {
+          float: left;
+          height: 60px;
+          margin-right: -20px;
+        }
+
+        p {
+          float: left;
+          line-height: 60px;
+          margin: 0;
+          font-size: 0.65em;
+          color: var(--grey-font);
+        }
+      }
+
+      .protocolos {
+        float: right;
+        background-color: white;
+        height: 45px;
+        border-radius: 3px;
+        color: var(--black-font);
+        padding: 5px 25px;
+
+        p {
+          font-size: 0.75em;
+          float: left;
+          margin: 0;
+          line-height: 45px;
+          position: relative;
+
+          i {
+            font-size: 1.4em;
+            position: absolute;
+            top: 0.9em;
+            color: var(--grey-disabled);
+          }
+
+          b {
+            margin-left: 2.5em;
+          }
+        }
+
+        .dados {
+          float: left;
+          text-align: center;
+          height: 45px;
+          padding-top: 10px;
+          margin: 0 20px 0 40px;
+
+          p {
+            float: none;
+            line-height: 12px;
+          }
+
+          .total {
+            font-size: 0.7em;
+            font-weight: 500;
+          }
+
+          .week {
+            font-size: 0.6em;
+
+            span {
+              color: #7BD3AE;
+            }
+          }
+        }
+
+        .arrow {
+          margin-right: 20px;
+
+          i {
+            color: var(--default-blue);
+            font-weight: bold
+          }
+        }
+      }
+    }
+  }
 }

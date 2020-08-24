@@ -1,19 +1,19 @@
 nav{
-  padding: 0.1em 8em 0.1em 2em;
+  padding: 2px 128px 2px 32px;
   background-color: white;
-  height: 5.4em;
+  height: 86px;
 
   .header-logo {
     float: left;
 
     img {
-      height: 5.2em;
+      height: 84px;
     }
   }
 
   .header-tools {
     float: right;
-    height: 5.2em;
+    height: 84px;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -41,10 +41,10 @@ nav{
 
     span {
       font-size: 1.2em;
-      height: 1.8em;
-      width: 1.8em;
+      height: 34px;
+      width: 34px;
       background-color: #48921f;
-      border-radius: 1.4em;
+      border-radius: 17px;
       color: white;
 
       p {
