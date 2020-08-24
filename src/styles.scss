@@ -4,6 +4,8 @@
   --black-btn: #555E6B;
   --grey-font: #6E7888;
   --grey-disabled: #D4D6DA;
+  --grey-hover: #FBFBFD;
+  --grey-background: #EFEFEF;
   --blue: #2A3D84;
   --light-blue: #455BAC;
   --blue-active: #3B4E91;
@@ -22,6 +24,11 @@ input:focus, select:focus, button:focus {
   outline: none;
 }
 
+
+
+//////////custom buttons//////////////
+
+
 .btn-blue {
   height: 34px;
   font-size: 0.65rem;
@@ -30,7 +37,7 @@ input:focus, select:focus, button:focus {
   color: white;
   font-weight: bold;
   border-radius: 3px;
-  padding: 1px 20px;
+  padding: 1px 30px;
   cursor: pointer;
 }
 
@@ -120,7 +127,7 @@ input:focus, select:focus, button:focus {
   color: white;
   font-weight: bold;
   border-radius: 3px;
-  padding: 1px 20px;
+  padding: 1px 30px;
   cursor: pointer;
 }
 
@@ -132,7 +139,7 @@ input:focus, select:focus, button:focus {
   color: var(--black-font);
   font-weight: bold;
   border-radius: 3px;
-  padding: 1px 20px;
+  padding: 1px 30px;
   cursor: pointer;
 }
 
@@ -145,4 +152,181 @@ input:focus, select:focus, button:focus {
   width: 100%;
   z-index: 2000;
   background-color: rgba(0,0,0,0.3);
+}
+
+
+
+//////////custom table////////////
+
+
+table {
+  width: 98%;
+  clear: both;
+  background-color: white;
+  margin: 100px 28px;
+  border-radius: 3px;
+  font-size: 0.65em;
+
+  tr {
+    width: 100%;
+
+    th {
+      height: 42px;
+      color: var(--grey-font);
+      font-weight: 500;
+      margin: -3px;
+      letter-spacing: 1px;
+
+      p {
+        margin: 0;
+        line-height: 42px;
+      }
+    }
+
+    td {
+      min-height: 58px;
+      margin: -3px;
+      color: var(--grey-font);
+      font-weight: 500;
+      white-space: normal;
+      word-wrap: break-word;
+      padding-top: 10px;
+
+      .descricao {
+        font-size: 1.1em;
+        font-weight: 500;
+        color: var(--black-font);
+      }
+
+      p {
+        margin: 0;
+        line-height: 58px;
+      }
+
+      .btn-rounded-gray, .btn-rounded-black {
+        margin: 14px 6px;
+      }
+    }
+
+    td.action {
+      position: relative;
+
+      .arrow-right {
+        position: absolute;
+        top: 30px;
+        font-size: 1rem;
+        font-weight: bold;
+      }
+    }
+
+    td.text-left {
+      padding-top: 10px;
+
+      p {
+       line-height: 18px;
+     }
+    }
+
+    .text-left {
+      text-align: left !important;
+
+      p {
+        padding-left: 30px;
+      }
+    }
+
+    .text-center {
+      text-align: center !important;
+    }
+
+    .col-2 {
+      float: left;
+      width: 16.6666667%;
+    }
+
+    .col-4 {
+      float: left;
+      width: 32.3333333%;
+    }
+  }
+
+  tr:hover {
+    background-color: var(--grey-hover);
+
+    td {
+      color: var(--default-blue) !important;
+      font-weight: 600;
+
+      .descricao {
+        font-weight: 800;
+        color: var(--default-blue);
+      }
+    }
+  }
+
+  .nenhum-requerimento {
+    text-align: center;
+    color: var(--grey-font);
+  }
+}
+
+
+
+/////////form//////////
+
+.form-group {
+  float: left;
+  position: relative;
+
+  label {
+    font-size: 0.65em;
+    font-weight: 500;
+    color: var(--black-font);
+  }
+
+  label.not-empty {
+    color: var(--default-blue);
+  }
+
+  input, select {
+    margin-top: 10px;
+    height: 30px;
+    border: 1px solid var(--grey-disabled);
+    border-radius: 3px;
+    color: var(--default-blue);
+    padding: 1px 20px;
+    width: 315px;
+    margin-right: 20px;
+    font-size: 0.65em;
+    font-weight: 500;
+  }
+
+  select {
+    height: 34px;
+    width: 358px;
+    background-color: white;
+    -webkit-appearance: none;
+  }
+
+  .empty {
+    color: #8A7975;
+  }
+
+  i {
+    color: var(--default-blue);
+    position: absolute;
+    top: 38px;
+    right: 35px;
+    font-size: 1.2em;
+  }
+
+  input:focus, select:focus {
+    border: 1px solid var(--default-blue);
+  }
+}
+
+.btn-blue, .btn-grey, .btn-green {
+  float: left;
+  margin-top: 28px;
+  margin-right: 8px;
 }

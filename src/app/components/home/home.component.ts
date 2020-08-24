@@ -21,7 +21,8 @@ export class HomeComponent implements OnInit {
   requerimentos:Requerimento[] = [];
 
   modalController:any = {
-    modalDelete: false
+    modalDelete: false,
+    modalView: false
   }
 
   constructor() { }
@@ -60,5 +61,18 @@ export class HomeComponent implements OnInit {
     if($event.deleteRequerimento){
       this.requerimentos.splice(this.requerimentos.indexOf(this.requerimentoSelecionado), 1);
     }
+  }
+
+
+
+  showViewModal(requerimento:Requerimento){
+    this.modalController.modalView = true;
+    this.requerimentoSelecionado = requerimento;
+  }
+
+
+
+  viewEvent($event){
+    this.modalController.modalView = $event.modalView;
   }
 }

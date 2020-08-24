@@ -6,13 +6,15 @@ import { HomeComponent } from './home/home.component';
 import { HeaderComponent } from './base/header/header.component';
 import { NavbarComponent } from './base/navbar/navbar.component';
 import { DeleteComponent } from './modals/delete/delete.component';
+import { ViewComponent } from './modals/view/view.component';
 
 @NgModule({
   declarations: [
     HomeComponent,
     HeaderComponent,
     NavbarComponent,
-    DeleteComponent
+    DeleteComponent,
+    ViewComponent
   ],
   imports: [
     CommonModule,
@@ -23,13 +25,15 @@ import { DeleteComponent } from './modals/delete/delete.component';
     HomeComponent,
     HeaderComponent,
     NavbarComponent,
-    DeleteComponent
+    DeleteComponent,
+    ViewComponent
   ],
   exports:[
     HomeComponent,
     HeaderComponent,
     NavbarComponent,
-    DeleteComponent
+    DeleteComponent,
+    ViewComponent
   ]
 })
 export class ComponentsModule { }

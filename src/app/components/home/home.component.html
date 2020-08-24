@@ -25,12 +25,12 @@
       <h3>Natureza do Requerimento</h3>
       <p>Tela de cadastro</p>
       <div class="form-group">
-        <label for="descricao">Descrição</label><br>
+        <label [class.not-empty]="requerimento.descricao" for="descricao">Descrição</label><br>
         <input type="text" name="descricao" placeholder="Preencha aqui" [(ngModel)]="requerimento.descricao">
       </div>
       <div class="form-group">
-        <label for="input">Input 2</label><br>
-        <select [class.empty]="requerimento.input == ''" name="input" [(ngModel)]="requerimento.input">
+        <label [class.not-empty]="requerimento.input" for="input">Input 2</label><br>
+        <select [class.empty]="!requerimento.input" name="input" [(ngModel)]="requerimento.input">
           <option value="">Preencha aqui</option>
           <option value="Teste 1">Teste 1</option>
           <option value="Teste 2">Teste 2</option>
@@ -52,16 +52,22 @@
         <th class="col-4 text-center"><p>AÇÃO</p></th>
       </tr>
       <tr *ngFor="let r of requerimentos">
-        <td class="col-4 text-left"><p class="descricao">{{r.descricao}}</p><p>{{r.input}}</p></td>
+        <td class="col-4 text-left">
+          <div>
+            <p class="descricao">{{r.descricao}}</p>
+            <p>{{r.input}}</p>
+          </div>
+        </td>
         <td class="col-2 text-center"><p>12</p></td>
         <td class="col-2 text-center"><p>200</p></td>
         <td class="col-4 text-center action">
-          <button class="btn-rounded-black" type="button"><i class="material-icons">visibility</i> Visualizar</button>
+          <button class="btn-rounded-black" type="button" (click)="showViewModal(r)"><i class="material-icons">visibility</i> Visualizar</button>
           <button class="btn-rounded-gray" type="button"><i class="material-icons">create</i> Editar</button>
           <button class="btn-rounded-gray" type="button" (click)="showDeleteModal(r)"><i class="material-icons">delete_outline</i> Deletar</button>
           <i class="material-icons arrow-right">keyboard_arrow_right</i>
         </td>
       </tr>
+      <p *ngIf="requerimentos.length == 0" class="nenhum-requerimento">Nenhume registro encontrado</p>
     </table>
   </section>
 </main>
@@ -71,3 +77,10 @@
   [requerimento]="requerimentoSelecionado"
   (deleteEvent)="deleteEvent($event)"
 ></app-delete>
+
+
+<app-view
+  [show]="modalController.modalView"
+  [requerimento]="requerimentoSelecionado"
+  (viewEvent)="viewEvent($event)"
+></app-view>

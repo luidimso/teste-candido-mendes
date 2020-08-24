@@ -1,0 +1,72 @@
+<div class="backdrop" *ngIf="show" (click)="sendResponse()"></div>
+<div class="modal" *ngIf="show">
+  <div class="tabs">
+    <p class="disabled">Tipo de natureza</p>
+    <p>Unidade/Setor</p>
+  </div>
+
+  <div class="content">
+    <div class="top">
+      <p>Natureza<i class="material-icons" (click)="sendResponse()">close</i></p>
+      <h3>{{requerimento.descricao}}</h3>
+    </div>
+
+
+    <form action="#">
+      <div class="form-group">
+        <label [class.not-empty]="local.setor" for="descricao">Setor</label><br>
+        <input type="text" name="setor" placeholder="Preencha o setor" [(ngModel)]="local.setor">
+      </div>
+
+      <div class="form-group">
+        <label [class.not-empty]="local.unidade" for="unidade">Unidades</label><br>
+        <input type="text" name="unidade" placeholder="Preencha a unidade" [(ngModel)]="local.unidade">
+      </div>
+
+      <input class="btn-blue" type="submit" value="Adicionar">
+    </form>
+
+
+    <table>
+      <tr>
+        <th class="col-4 text-left"><p>SETORES</p></th>
+        <th class="col-4 text-center text-right"><p>AÇÃO</p></th>
+        <th class="col-2 text-center"><p>UNIDADES</p></th>
+        <th class="col-2 text-center"><p>AÇÃO</p></th>
+      </tr>
+      <tr *ngFor="let l of locais">
+        <td class="col-4 text-left">
+          <div class="local-icon">
+            <i class="material-icons">tab</i>
+          </div>
+          <div>
+            <p class="descricao">{{l.setor}}</p><p>19 unidadades</p>
+          </div>
+        </td>
+
+        <td class="col-4 text-right action">
+          <div class="local-btn">
+            <i class="material-icons">delete_outline</i>
+          </div>
+          <i class="material-icons arrow-right">keyboard_arrow_right</i>
+        </td>
+
+        <td class="col-2 text-center col-unidade">
+          <div class="local-icon">
+            <i class="material-icons">account_balance</i>
+          </div>
+          <div>
+            <p class="unidade">{{l.unidade}}</p>
+          </div>
+        </td>
+
+        <td class="col-2 text-center col-unidade">
+          <div class="local-btn">
+            <i class="material-icons">delete_outline</i>
+          </div>
+        </td>
+      </tr>
+      <p *ngIf="locais.length == 0" class="nenhum-requerimento">Nenhume registro encontrado</p>
+    </table>
+  </div>
+</div>
