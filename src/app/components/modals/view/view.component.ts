@@ -37,4 +37,12 @@ export class ViewComponent implements OnInit {
     this.viewEvent.emit(response);
   }
 
+
+  add(){
+    if(this.local.setor && this.local.unidade) {
+      let exemplo:Local = new Local(this.local.setor, this.local.unidade);
+      this.locais.unshift(exemplo);
+    }
+  }
+
 }

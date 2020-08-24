@@ -1,4 +1,9 @@
 /* You can add global styles to this file, and also import other style files */
+@import '../node_modules/@syncfusion/ej2-base/styles/material.css';
+@import '../node_modules/@syncfusion/ej2-buttons/styles/material.css';
+@import '../node_modules/@syncfusion/ej2-popups/styles/material.css';
+@import '../node_modules/@syncfusion/ej2-angular-notifications/styles/material.css';
+
 :root {
   --black-font: #3E4857;
   --black-btn: #555E6B;
@@ -109,6 +114,46 @@ input:focus, select:focus, button:focus {
   letter-spacing: 1px;
   border-radius: 3px;
   padding: 13px 26px 13px 28px;
+  cursor: pointer;
+  border-radius: 20px;
+  margin: 10px;
+  i {
+    font-size: 1rem;
+    vertical-align: middle;
+    margin-top: -3px;
+  }
+}
+
+.btn-rounded-blue-big {
+  height: 30px;
+  font-size: 0.65em;
+  background-color: var(--default-blue);
+  border: 1px solid var(--default-blue);
+  color: white;
+  font-weight: 600;
+  letter-spacing: 1px;
+  border-radius: 3px;
+  padding: 6px 26px 6px 28px;
+  cursor: pointer;
+  border-radius: 20px;
+  margin: 10px;
+  i {
+    font-size: 1rem;
+    vertical-align: middle;
+    margin-top: -3px;
+  }
+}
+
+.btn-rounded-black-big {
+  height: 30px;
+  font-size: 0.65em !important;
+  background-color: transparent;
+  border: 1px solid white;
+  color: white;
+  font-weight: 600;
+  letter-spacing: 1px;
+  border-radius: 3px;
+  padding: 6px 26px 6px 28px;
   cursor: pointer;
   border-radius: 20px;
   margin: 10px;

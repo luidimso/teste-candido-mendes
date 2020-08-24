@@ -6,6 +6,8 @@ import { HomeComponent } from './components/home/home.component';
 import { ComponentsModule } from './components/components.module';
 import { RouterModule } from '@angular/router';
 import { CommonModule } from '@angular/common';
+import { ToastModule } from '@syncfusion/ej2-angular-notifications';
+
 
 @NgModule({
   declarations: [
@@ -15,6 +17,7 @@ import { CommonModule } from '@angular/common';
     BrowserModule,
     ComponentsModule,
     CommonModule,
+    ToastModule,
     RouterModule.forRoot([
       { path: '', component: HomeComponent }
     ])

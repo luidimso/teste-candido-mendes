@@ -15,15 +15,15 @@
     <form action="#">
       <div class="form-group">
         <label [class.not-empty]="local.setor" for="descricao">Setor</label><br>
-        <input type="text" name="setor" placeholder="Preencha o setor" [(ngModel)]="local.setor">
+        <input type="text" name="setor" placeholder="Preencha o setor" [(ngModel)]="local.setor" required>
       </div>
 
       <div class="form-group">
         <label [class.not-empty]="local.unidade" for="unidade">Unidades</label><br>
-        <input type="text" name="unidade" placeholder="Preencha a unidade" [(ngModel)]="local.unidade">
+        <input type="text" name="unidade" placeholder="Preencha a unidade" [(ngModel)]="local.unidade" required>
       </div>
 
-      <input class="btn-blue" type="submit" value="Adicionar">
+      <input class="btn-blue" type="submit" value="Adicionar" (click)="add()">
     </form>
 
 

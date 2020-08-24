@@ -7,6 +7,8 @@ import { HeaderComponent } from './base/header/header.component';
 import { NavbarComponent } from './base/navbar/navbar.component';
 import { DeleteComponent } from './modals/delete/delete.component';
 import { ViewComponent } from './modals/view/view.component';
+import { ToastModule } from '@syncfusion/ej2-angular-notifications';
+
 
 @NgModule({
   declarations: [
@@ -19,7 +21,8 @@ import { ViewComponent } from './modals/view/view.component';
   imports: [
     CommonModule,
     RouterModule,
-    FormsModule
+    FormsModule,
+    ToastModule
   ],
   entryComponents: [
     HomeComponent,

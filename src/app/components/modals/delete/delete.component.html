@@ -1,6 +1,15 @@
 <div class="backdrop" *ngIf="show" (click)="sendResponse(false)"></div>
+
 <div class="modal" *ngIf="show">
   <h3>Você tem certeza que deseja excluir?</h3>
   <button class="btn-rounded-gray-big" type="button" (click)="sendResponse(false)">Cancelar</button>
   <button class="btn-rounded-red-big" type="button" (click)="sendResponse(true)"><i class="material-icons">delete_outline</i> Deletar</button>
 </div>
+
+<ejs-toast #toast>
+    <ng-template #content>
+      <p><i class="material-icons">check_circle</i> O arquivo acabou de ser deletado</p>
+      <button type="button" class="btn-rounded-blue-big" (click)="toast.hide()">OK, ENTENDI</button>
+      <button type="button" class="btn-rounded-black-big" (click)="toast.hide()">FECHAR</button>
+    </ng-template>
+</ejs-toast>

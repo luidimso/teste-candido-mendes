@@ -16,3 +16,24 @@
     font-size: 1.3em;
   }
 }
+
+
+.e-toast {
+  position: fixed;
+  width: 270px !important;
+  bottom: 50px;
+  right: 20px;
+
+  .e-toast-content {
+    text-align: center !important;
+    font-size: 0.65rem !important;
+    position: relative;
+
+    i {
+      position: absolute;
+      top: 10px;
+      left: 22px;
+      font-size: 1rem;
+    }
+  }
+}
